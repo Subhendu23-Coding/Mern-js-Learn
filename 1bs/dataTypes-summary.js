@@ -56,10 +56,10 @@ const myFunction = function(){
 let myYoutubeName = "subhendumaajhi@gmail.com"; // Stack mein value store hoti hai
 let anotherName = myYoutubeName; // "subhendumaajhi@gmail.com" ki copy ho gayi hai
 
-anotherName = "chai-aur-code"; // new value assign kiya gaya
+anotherName = "majhi"; // new value assign kiya gaya
 
 console.log(myYoutubeName); // "subhendumaajhi@gmail.com" (original value change nahi hui)
-console.log(anotherName); // "chai-aur-code" (copy ho gayi thi, ab yeh new value ho gayi)
+console.log(anotherName); // "majhi" (copy ho gayi thi, ab yeh new value ho gayi)
 
 // Jab aap anotherName = myYoutubeName; likhte ho, to JavaScript mein yeh ek new copy banata hai. Isliye jab aap anotherName ko update karte ho, myYoutubeName ka value unchanged rahta hai.
 
