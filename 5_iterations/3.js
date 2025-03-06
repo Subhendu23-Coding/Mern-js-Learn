@@ -60,4 +60,4 @@ console.log(map2);
 //     { name: 'Subhendu' } => 'Person',
 //     101 => 'ID'
 //   }
-  
+  //
