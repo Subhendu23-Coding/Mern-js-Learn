@@ -1,15 +1,18 @@
-"use strict"; // strict mode mein code chalega, jisme errors jaldi show honge
-            // treat all js code a newer version
-            
-console.log(5 + 5); // Output: 10, ye readable code hai jo easily samajh mein aata hai
-console.log("Subho"); // Output: "Subho", ye ek string hai
+"use strict"; // treat all Javascript code as newer version
 
-let name = "Subho";  // name ek string variable hai
-let age = "26";      // age ek string variable hai, lekin ideally yeh number hona chahiye
-console.log(typeof 26); // Output: "number", 26 ek number type ka hai
+// alert("hello"); //(we are using nodejs ,)
+// alert(5+5) //(we are using nodejs , not browser)
 
-let isLoggedIn = false;  // isLoggedIn ek boolean type ka variable hai
-let state = "w.w";       // state ek string type ka variable hai
+
+// console.log(5 + 5); // code readability should be high
+// console.log("Subho");
+
+// let name = "Subho"; //string data typ
+// let age = 26
+// console.log(typeof 26 ); // => Number
+
+let isLoggedIn = false;
+let state ;
 
 // number => 2 to the power 53
 // bigint 
@@ -19,18 +22,24 @@ let state = "w.w";       // state ek string type ka variable hai
 // undefined => value is not assigned yet
 // symbol => unique
 
-/***********Object*********** */
+// object
 
-console.log(typeof "Subho");      // Output: string
-console.log(typeof undefined);    // Output: undefined
-console.log(typeof null);         // Output: object (JavaScript ka ek bug)
-console.log(typeof "w.w");        // Output: string
+console.log(typeof "Subho");
+console.log(typeof undefined); //undefined  
+console.log(typeof null); // object hota hai
+console.log(typeof "w.w");
 
-// Explanation of Data Types
+// undefined
 
-/* Boolean: True ya false ki values hoti hain.
-Integer: Whole numbers (positive or negative) hote hain, jaise 10, -5.
-String: Text data ko represent karta hai, jaise "hello", "Subho".
-Array: Ek collection of items, jaise [1, 2, 3].
-Float: Decimal numbers, jaise 5.5, 10.2.
-Char: Single character ko store karne ke liye use hota hai (though, JavaScript mein string use karna preferred hai).*/
+
+/*
+Explanation
+Boolean: A boolean data type is a single bit of information that can be either true or false. 
+Integer: An integer data type represents whole numbers, and the number of digits can vary based on the device. 
+String: A string data type represents a sequence of characters or text. 
+Array: An array data type is a collection of data items stored in contiguous memory locations. 
+Float: A float data type is a subtype of NUMBER that represents a number value with fractional parts. 
+Char: A char data type stores character data in a fixed-length field. 
+*/
+
+
