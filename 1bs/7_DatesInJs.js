@@ -1,7 +1,11 @@
 /****************************Date***********************/
 
 let myDate = new Date();
-console.log();
+// console.log(myDate);
+// console.log(typeof myDate);  //object
+
+
+
 console.log(myDate.toString());
 console.log(myDate.toUTCString());
 console.log(myDate.toISOString());
@@ -12,75 +16,86 @@ console.log(myDate.toJSON());
 console.log(myDate.toTimeString());
 console.log(myDate.toLocaleTimeString());
 
+// let myCreatedDate = new Date(2024, 0, 24)
+// console.log(myCreatedDate.toDateString());
 
-// new Date(): Ye current date aur time ko store karta hai.
-// toString(): Full date aur time ko ek string mein dikhata hai.
-// toUTCString(): Date ko UTC format mein convert karta hai.
-// toISOString(): ISO 8601 format mein date ko show karta hai.
-// toDateString(): Sirf date ko string format mein dikhata hai.
-// toLocaleDateString(): Date ko local format mein show karta hai (aapke locale ke hisaab se).
-// toLocaleString(): Date aur time ko local format mein dikhata hai.
-// toJSON(): Date ko JSON format mein convert karta hai.
-// toTimeString(): Sirf time ko dikhata hai.
-// toLocaleTimeString(): Time ko local format mein dikhata hai.
+// let myCreatedDate = new Date(2024, 0, 24, 5, 3)
+// console.log(myCreatedDate.toLocaleString());
 
-/****************************************Date************************************ */
+// let myCreatedDate = new Date("2026-02-13")
+// console.log(myCreatedDate.toLocaleString());
 
-console.log(myDate.getTimezoneOffset());
+// let myCreatedDate = new Date("02-14-2025")
+// console.log(myCreatedDate.toLocaleString());
 
-//getTimezoneOffset(): Aapke current timezone ka offset minutes mein return karega (jaise India ka offset +330 minutes hai)
-/***************************************************************************************** */
-
-console.log(typeof myDate); // Date is an object in JavaScript
-
-//typeof: Isse aap type check kar sakte hain. myDate ka type "object" hoga kyunki Date ek object type ka data structure hai.
-
-/************************************************************************************************************** */
-
-let myBirthDate = new Date("1997-11-07");
-
-//new Date("1997-11-07") se ek specific date, 7th November 1997, create ki gayi hai
-
-/********************************************************************************************************* */
-
-console.log(myBirthDate.toDateString());   // Date ko string mein display karta hai
-console.log(myBirthDate.toLocaleString()); // Date aur time ko local format mein display karta hai
-console.log(myBirthDate.toLocaleTimeString()); // Sirf time ko local format mein display karta hai
+let myCreatedDate = new Date("02-14-2025");
+let myTimeStamp = Date.now();
+console.log(myTimeStamp);          // Current timestamp in milliseconds
+console.log(myCreatedDate.getTime()); // Timestamp for myCreatedDate
+console.log(Date.now());           // Current timestamp
+console.log(Math.floor(Date.now()/1000)); // Timestamp in seconds
 
 
-// toDateString(): Birth date ko short string format mein show karta hai.
-// toLocaleString(): Local date aur time format mein display karega.
-// toLocaleTimeString(): Local time format mein time dikhata hai
 
+// let newDate = new Date();
+console.log(newDate.getMonth());  // Returns the month index (0 for January, 11 for December)
+console.log(newDate.getDay());    // Returns the day index (0 for Sunday, 6 for Saturday)
 
-/********************************************************************** */
-let myTimeStampInMilliSecond = Date.now(); // Current timestamp in milliseconds
-let diff = (myTimeStampInMilliSecond - (myBirthDate.getTime())); // Difference between current time and birthdate in milliseconds
+console.log(newDate.getMonth() + 1);
 
-let ageInDays = ((((diff / 1000) / 60) / 60) / 24); // Converting milliseconds to days
-let myAge = Math.floor(ageInDays / 365.25); // Converting days to years
+// let newDate =new Date()
+console.log(newDate.getDay());
 
-let remainingDays = ageInDays - (myAge * 365.25); // Remaining days after full years
-let ageMonths = Math.floor(Math.floor(remainingDays / 30.44)); // Converting remaining days to months
-
-remainingDays -= ageMonths * 30.44 - 1; // Adjusting days
-let ageDays = Math.floor(remainingDays); // Final remaining days
-
-/*************************************************************************************** */
-
-console.log(`My age is ${myAge} Years ${ageMonths} months and ${ageDays} days`);
-
-
-/********************************************************************* */
 
 let newDate = new Date();
-console.log(newDate.getMonth());  // Returns month index (0 for January, 11 for December)
-console.log(newDate.getDay());    // Returns day index (0 for Sunday, 6 for Saturday)
-
-/*********************************************************************************************** */
 let now = newDate.toLocaleString('default', {
     weekday: "long",
 });
 console.log(now); // Prints the current weekday name (e.g., "Monday")
+
+
+
+// let myDate = new Date();
+console.table([
+  { method: 'toString', result: myDate.toString() },
+  { method: 'toUTCString', result: myDate.toUTCString() },
+  { method: 'toISOString', result: myDate.toISOString() },
+  { method: 'toDateString', result: myDate.toDateString() },
+  { method: 'toLocaleDateString', result: myDate.toLocaleDateString() },
+  { method: 'toLocaleString', result: myDate.toLocaleString() },
+  { method: 'toJSON', result: myDate.toJSON() },
+  { method: 'toTimeString', result: myDate.toTimeString() },
+  { method: 'toLocaleTimeString', result: myDate.toLocaleTimeString() }
+]);
+
+
+console.log(myDate.getTimezoneOffset());
+
+getTimezoneOffset(); //Aapke current timezone ka offset minutes mein return karega (jaise India ka offset +330 minutes hai)
+
+
+// /********************************************************************************************************* */
+
+ console.log(myBirthDate.toDateString());   // Date ko string mein display karta hai
+ console.log(myBirthDate.toLocaleString()); // Date aur time ko local format mein display karta hai
+ console.log(myBirthDate.toLocaleTimeString()); // Sirf time ko local format mein display karta hai
+
+
+// /********************************************************************** */
+// let myTimeStampInMilliSecond = Date.now(); // Current timestamp in milliseconds
+// let diff = (myTimeStampInMilliSecond - (myBirthDate.getTime())); // Difference between current time and birthdate in milliseconds
+
+// let ageInDays = ((((diff / 1000) / 60) / 60) / 24); // Converting milliseconds to days
+// let myAge = Math.floor(ageInDays / 365.25); // Converting days to years
+
+// let remainingDays = ageInDays - (myAge * 365.25); // Remaining days after full years
+// let ageMonths = Math.floor(Math.floor(remainingDays / 30.44)); // Converting remaining days to months
+
+// remainingDays -= ageMonths * 30.44 - 1; // Adjusting days
+// let ageDays = Math.floor(remainingDays); // Final remaining days
+
+// /*************************************************************************************** */
+
+// console.log(`My age is ${myAge} Years ${ageMonths} months and ${ageDays} days`);
 
 
