@@ -32,7 +32,7 @@ console.log(typeof "w.w");
 // undefined
 
 
-/*
+/** *
 Explanation
 Boolean: A boolean data type is a single bit of information that can be either true or false. 
 Integer: An integer data type represents whole numbers, and the number of digits can vary based on the device. 
