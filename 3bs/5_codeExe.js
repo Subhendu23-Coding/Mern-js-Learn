@@ -2,7 +2,7 @@
 
 // JavaScript is single threaded
 
-// {} => Global Execution Context (this)
+// {} Global Execution Context (this)
 // Function or Functional Execution Context
 // Eval Execution Context
 
@@ -20,7 +20,7 @@ function addNum(num1, num2){
     return total;
 }
 // third phase
-// *Execution Phase* or *Execution Context*
+// *Executzion Phase* or *Execution Context*
 
 // new execution context (new sandbox)
 // new variable environment + execution thread
