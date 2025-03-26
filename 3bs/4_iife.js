@@ -1,29 +1,52 @@
-// Immediately Invoked Function Expressions (IIFE)
+/******************************Code Execution */
 
+// JavaScript is single threaded
 
-// function chai(){
-//     console.log(`DB Connected`);
-// }
-// chai();
+// {} Global Execution Context (this)
+// Function or Functional Execution Context
+// Eval Execution Context
 
+// first phase
+// *Global Execution* or *Parent Execution Context*
 
-// To resolve the problem of global scope pollution problem
-// to remove the global scope variables and declaration pollution we use IIFE
+// second phase
+// *Memory Creation Phase* or *Memory Phase* or *Creation Phase*
+// all the value will be declared as 'undefined' before excution phase
 
-(function chai(){
-    // Named IIFE
-    console.log(`DB Connected`);
-})();
+let val1 = 10;
+let val2 = 15;
+function addNum(num1, num2){
+    let total = num1 + num2;
+    return total;
+}
+// third phase
+// *Executzion Phase* or *Execution Context*
 
-( function aurCode() {
-    console.log(`Not Connected`);
-} )();
+// new execution context (new sandbox)
+// new variable environment + execution thread
+// after execution, new execution context will be deleted and again if (new sandbox) required it will create new execution context again and delete again. and return will be stored in global or parent execution context
 
-( () => {
-    console.log(`DB Two Connected`);
-})();
+let result1 = addNum(val1, val2);
+let result2 = addNum(35, 36);
 
-( (name) => {
-    // Simple IIFE or Unnamed IIFE
-    console.log(`${name} not connected`);
-} )('Subhendu');
+console.log(result1);
+console.log(result2);
+
+// ****************** Call Stack ******************
+
+// LIFO => Last In First Out
+
+function one(){
+    console.log("one");
+    two();
+}
+function two(){
+    console.log("two");
+    three();
+}
+function three(){
+    console.log("three");
+}
+one();
+two();
+three();
