@@ -1,6 +1,6 @@
 /***************************Function sayMyName() */
 
-function sayMyName(){
+function MyName(){
     console.log("S");
     console.log("U");
     console.log("B");
@@ -11,76 +11,83 @@ function sayMyName(){
     console.log("U");
 }
 
-// sayMyName();
+// MyName();
 
 
 /**********************Function addTwoNum() (Addition of Two Numbers)*********************** */
-function addTwoNum(num1, num2){
-    return num1 + num2;
+function addTwoNum(number1, number2){
+    console.log (number1 + number2);
 }
+
+function addTwoNum(number1, number2){
+        let result = number1 + number2
+        console.log("Subhendu");
+        return result
+     }
+
+const result1 = addTwoNum(3, 4); // Arguments are 3 and 4 here
+
+// console.log("Result:", result1);
+
+function addTwoNum(number1, number2){
+    let result = number1 + number2
+    console.log("Subhendu");
+    return result
+ }
 
 // const result = addTwoNum(3, 4); // Arguments are 3 and 4 here
 
-console.log('Result: ${result}');
+// console.log("Result:", result);
 
-// function addTwoNum(num1, num2){ // here num1 &num2 is parameter
-// console.log(num1+num2);
-//}
-
-function addTwoNum(num1, num2){
-    //let result = num1 +num2;
-    //return result;
-    return num1+num2;
-}
-
-const result = addTwoNum(3,4); // here num1 &num2 is arguments
-
-// console.log('Result: ${result}');
 
 /**********************Function loginUserMessage() with Default Parameter */
 
-function loginUserMessage(username = "sam"){
-    if(!username){ // same as => if(username===undefined)
-        console.log("Please Enter a username");
-    return 0;
-}
-return '${username} just logged';
-}
-
-// loginUserMessage("Subhendu");
-// console.log(logineUserMessage("Subhendu"));
-console.log(loginUserMessage('Subhendu'));
-
-function calculateCartPrice(val1, ...num1){
-    return num1;
+function loginUserMessage(username = "Sam") {
+    if (!username) {  // This check is redundant since the default value is "sam"
+        console.log("Subho");
+        return 0;
+    }
+    return `${username} just logged in`;  // Use backticks for string interpolation
 }
 
-//console.log(calculateCartPrice(200, 400, 500, 1200));
+// loginUserMessage("Subho");  // Logs nothing because there's no console.log here
+// console.log(loginUserMessage("Subho"));  // Logs: Subhendu just logged in
+// console.log(loginUserMessage());  // Logs: sam just logged in (uses default value)
+
+
+function calculateCartPrice(...number1){
+    return number1;
+}
+
+// console.log(calculateCartPrice(200, 400, 500, 1200));
 
 /************************************************************* */
 const user = {
     username: "Subhendu",
-    prices:299,
-}
+    prices: 299,
+};
 
-function handleObject(anyobject){
-    console.log('Username is ${anyobject.username} and price is ${anyobject.price}');
-
+function handleObject(anyobject) {
+    // Use backticks for string interpolation
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.prices}`);
 }
 
 // handleObject(user);
+
 handleObject({
     username: "sam",
-    price:399,
+    prices: 399, 
 });
+
+
 
 /********************************************************* */
 
 const myNewArray = [200, 400, 100, 600];
-function returnSecondValue(getArray){
-    return getArray[1];
+
+function returnSecondValue(getArray) {
+    return getArray[2];  // Accessing the element at index 1 (second element)
 }
 
-// console.log(returnSecondValue(myNewArray)); // => expected output: 400
-
-console.log(returnSecondValue([200, 400, 100, 600]));
+// console.log(returnSecondValue(myNewArray));  // => expected output: 400
+// console.log(returnSecondValue([200, 400, 100, 600]));  // => expected output: 400
